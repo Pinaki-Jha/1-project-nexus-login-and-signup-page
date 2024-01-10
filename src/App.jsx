@@ -3,6 +3,7 @@ import './App.css'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Error404 from './pages/Error404'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <h1>Project One</h1>
         </div>
         <Routes>
+          <Route path="*" element={<Error404/>}/>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
